@@ -1,0 +1,55 @@
+<div *ngIf="!display">
+  <h3 class="text-center">My super book</h3>
+
+  <div class="card-block row">
+    <ul class="list-group col-md-12">
+      <li class="mt-2">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <button class="btn btn-outline-info" style="width: 300px" (click)="OnPress('geo')">
+              <img src="assets/img/geo.png" style="width: 150px">
+            </button>
+          </div>
+          <div class="col-md-6  text-center">
+            <button class="btn btn-outline-info" style="width: 300px" (click)="OnPress('language')">
+              <img src="assets/img/language.png" style="width: 150px">
+            </button>
+          </div>
+        </div>
+      </li>
+      <li class="mt-2">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <button class="btn btn-outline-info" style="width: 300px" (click)="OnPress('sciences')">
+              <img src="assets/img/microscope.png" style="width: 150px">
+            </button>
+          </div>
+          <div class="col-md-6  text-center">
+            <button class="btn btn-outline-info" style="width: 300px" (click)="OnPress('history')">
+              <img src="assets/img/history-book.png" style="width: 150px">
+            </button>
+          </div>
+        </div>
+      </li>
+      <li class="mt-2">
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <button class="btn btn-outline-info" style="width: 300px" (click)="OnPress('French')">
+              <img src="assets/img/french.png" style="width: 150px">
+            </button>
+          </div>
+          <div class="col-md-6  text-center">
+            <button class="btn btn-outline-info" style="width: 300px" (click)="OnPress('Notes')">
+              <img src="assets/img/notes.png" style="width: 150px">
+            </button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div id="comp-render" *ngIf="display">
+  <h2>{{field}} </h2>
+  <button class="btn btn-danger" (click)="close()">Back</button>
+</div>
